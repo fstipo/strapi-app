@@ -412,10 +412,12 @@ Nav Links
 @media screen and (min-width: 992px) {
   .nav-links {
     display: flex;
+    align-self: stretch;
     justify-content: center;
   }
   .nav-center {
     display: grid;
+    align-self: stretch;
     grid-template-columns: auto 1fr;
   }
   .nav-link {
