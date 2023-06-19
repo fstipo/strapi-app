@@ -413,12 +413,10 @@ Nav Links
   .nav-links {
     display: flex;
     justify-content: center;
-    border: 2px solid red;
   }
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr;
-    border: 2px solid wheat;
   }
   .nav-link {
     padding: 0 1rem;
@@ -429,6 +427,56 @@ Nav Links
     font-size: 1.25rem;
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
-    border: 2px solid greenyellow;
+  }
+}
+/* 
+============= 
+Submenu
+=============== 
+*/
+.submenu {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .submenu {
+    display: block;
+    position: fixed;
+    width: var(--fluid-width);
+    max-width: var(--max-width);
+    background: white;
+    top: 6rem;
+    left: 50%;
+    padding: 2rem;
+    border-radius: var(--borderRadius);
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top;
+    perspective: 1000px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  .show-submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg) translateX(-50%);
+  }
+  .submenu h5 {
+    margin-bottom: 1rem;
+    color: var(--primary-700);
+  }
+  .submenu-links {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  .submenu-links a {
+    display: block;
+    color: var(--grey-900);
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .submenu-links svg {
+    color: var(--grey-500);
   }
 }
