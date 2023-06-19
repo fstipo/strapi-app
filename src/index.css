@@ -446,7 +446,9 @@ Submenu
     width: var(--fluid-width);
     max-width: var(--max-width);
     background: white;
-    top: 6rem;
+    top: 8rem;
+    /* navbar is connected with submenu */
+    /* top: 4rem; */
     left: 50%;
     padding: 2rem;
     border-radius: var(--borderRadius);
@@ -456,11 +458,13 @@ Submenu
     visibility: hidden;
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    z-index: -1;
   }
   .show-submenu {
     visibility: visible;
     opacity: 1;
     transform: rotateX(0deg) translateX(-50%);
+    z-index: 10;
   }
   .submenu h5 {
     margin-bottom: 1rem;
