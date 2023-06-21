@@ -32,6 +32,4 @@ const Submenu = () => {
 }
 export default Submenu
 
-// TODO: Problem with left side of submenu - test it
-// TOdo: readme -> 3D
-// TODO: Deploy
+
